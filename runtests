@@ -1,0 +1,14 @@
+#!/bin/bash
+bash testbash
+nsh testnsh
+
+Diff0= "" 
+Diff0= "$(
+	diff out0bash.txt out0nsh.txt
+)"
+
+if [ "$Diff0" = "" ] ; then
+	echo Output of test0 is equivalent between nsh and bash
+else
+	echo Error, output of test0 is different between nsh and bash
+fi

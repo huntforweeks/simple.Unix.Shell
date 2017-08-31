@@ -1,0 +1,8 @@
+#!/bin/bash
+#comments 
+# Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+cd testfolder
+ls -l | sort -k 5 -n -r > ../out0nsh.txt
+find /usr/bin/ | sed s:.*/:: | grep -i ^a > ../out1nsh.txt
+< ../out1nsh.txt wc > ../out2nsh.txt
+users > ../out3nsh.txt
